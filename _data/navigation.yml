@@ -1,0 +1,7 @@
+# Top navigation bar, in order.
+- title: Overview
+  url: /
+- title: Personnel
+  url: /personnel/
+- title: Publications
+  url: /publications/

@@ -1,0 +1,14 @@
+{% assign p = include.person %}
+<div class="person">
+  {% if p.photo and p.photo != "" %}
+    <img class="person-photo" src="{{ p.photo | relative_url }}" alt="{{ p.name }}">
+  {% endif %}
+  <div>
+    <div class="person-name">
+      {% if p.url and p.url != "" %}<a href="{{ p.url }}">{{ p.name }}</a>{% else %}{{ p.name }}{% endif %}
+      {% if p.role and p.role != "" %}<span class="person-role">{{ p.role }}</span>{% endif %}
+    </div>
+    {% if p.title and p.title != "" %}<div class="person-meta">{{ p.title }}</div>{% endif %}
+    {% if p.affiliation and p.affiliation != "" %}<div class="person-meta">{{ p.affiliation }}</div>{% endif %}
+  </div>
+</div>

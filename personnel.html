@@ -1,0 +1,18 @@
+---
+layout: page
+title: Personnel
+permalink: /personnel/
+---
+{% for g in site.data.people.groups %}
+  {% if g.members.size > 0 or g.note %}
+  <section>
+    <h2>{{ g.title }}</h2>
+    {% if g.members.size > 0 %}
+    <div class="people-grid">
+      {% for m in g.members %}{% include person.html person=m %}{% endfor %}
+    </div>
+    {% endif %}
+    {% if g.note %}<p class="muted">{{ g.note }}</p>{% endif %}
+  </section>
+  {% endif %}
+{% endfor %}

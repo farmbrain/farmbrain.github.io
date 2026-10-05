@@ -1,0 +1,24 @@
+---
+layout: page
+title: Publications
+permalink: /publications/
+---
+{%- capture pubs -%}{% bibliography %}{%- endcapture -%}
+{% if pubs contains "pub-item" %}
+<div class="publications">
+{{ pubs }}
+</div>
+{% else %}
+<p class="muted">Stay tuned!</p>
+{% endif %}
+
+<script>
+  document.querySelectorAll('.abstract-toggle').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var block = btn.closest('.pub-item').querySelector('.abstract-block');
+      var open = block.hasAttribute('hidden');
+      block.toggleAttribute('hidden', !open);
+      btn.setAttribute('aria-expanded', String(open));
+    });
+  });
+</script>

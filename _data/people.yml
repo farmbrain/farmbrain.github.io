@@ -1,0 +1,56 @@
+# Content for the Personnel page. Groups render in order; empty groups are
+# hidden unless they have a `note`.
+#
+# Member fields (all optional except name):
+#   name, role (e.g., "PI"), title, affiliation, url, photo (path under /assets/img/people/)
+#   pi: true  -> also listed under "Principal Investigators" on the Overview page
+
+groups:
+  - title: Principal Investigators
+    members:
+      - name: Daehyeok Kim
+        role: PI
+        title: Assistant Professor of Computer Science
+        affiliation: The University of Texas at Austin
+        url: https://daehyeok.kim/
+        pi: true
+      - name: Volkan Isler
+        role: Co-PI
+        title: Professor of Computer Science
+        affiliation: The University of Texas at Austin
+        url: https://www.cs.utexas.edu/~isler/
+        pi: true
+      - name: Aditya Akella
+        role: Co-PI
+        title: Professor of Computer Science
+        affiliation: The University of Texas at Austin
+        url: https://www.cs.utexas.edu/~akella/
+        pi: true
+
+  - title: Postdoctoral Researchers
+    members:
+      - name: Satadal (Sata) Sengupta
+        title: Postdoctoral Researcher
+        affiliation: The University of Texas at Austin
+
+  - title: Graduate Students
+    members:
+      - name: Alvin Choi
+        title: PhD Student
+        affiliation: The University of Texas at Austin
+      - name: Joon Ha Kim
+        title: PhD Student
+        affiliation: The University of Texas at Austin
+        url: https://jhkjames1110.github.io/
+      - name: Xiao Zhang
+        title: PhD Student
+        affiliation: The University of Texas at Austin
+        url: https://timez-zx.github.io/
+
+  - title: Undergraduate Students
+    members: []
+    note: >-
+      This project offers research opportunities to undergraduate students through course projects and independent study.
+
+  - title: Alumni
+    members: []

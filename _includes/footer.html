@@ -1,0 +1,12 @@
+{% assign award = site.data.project.award %}
+<footer class="site-footer">
+  <div class="container">
+    <p class="ack">
+      This material is based upon work supported by the National Science Foundation{% if award.number != "" %} under Grant No.
+      {% if award.url != "" %}<a href="{{ award.url }}">{{ award.number }}</a>{% else %}{{ award.number }}{% endif %}{% endif %}.
+      Any opinions, findings, and conclusions or recommendations expressed in this material are those of the
+      author(s) and do not necessarily reflect the views of the National Science Foundation.
+    </p>
+    <p>&copy; {{ site.time | date: '%Y' }} {{ site.data.project.institution }}</p>
+  </div>
+</footer>

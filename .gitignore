@@ -1,0 +1,11 @@
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+.bundle/
+/vendor/
+Gemfile.lock
+.DS_Store
+
+# The full proposal is a private reference; never publish it.
+farmbrain-proposal.pdf

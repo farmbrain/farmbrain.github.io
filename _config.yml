@@ -1,0 +1,40 @@
+# Site-wide settings. Page *content* lives in _data/*.yml and
+# _bibliography/papers.bib — you rarely need to touch this file.
+title: FarmBrain
+description: >-
+  FarmBrain: Enabling Real-Time Agricultural Robotics with AI-Native Cellular
+  Access Edge — an NSF-funded research project at The University of Texas at Austin.
+url: "https://farmbrain.github.io"
+baseurl: ""
+
+markdown: kramdown
+permalink: pretty
+
+plugins:
+  - jekyll-scholar
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+scholar:
+  style: apa
+  locale: en
+  source: /_bibliography
+  bibliography: papers.bib
+  bibliography_template: bib
+  replace_strings: true
+  join_strings: true
+  group_by: year
+  group_order: descending
+  sort_by: [year, month]
+  order: descending
+  bibliography_list_tag: ul
+  bibliography_item_tag: li
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .github
+  - scripts
+  - farmbrain-proposal.pdf

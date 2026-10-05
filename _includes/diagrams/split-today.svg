@@ -1,0 +1,19 @@
+<svg class="dg" viewBox="0 0 440 300" role="img" aria-labelledby="dg-today-t">
+  <title id="dg-today-t">Today: a robot carries a high-performance on-board computer that runs both the reactive and the deliberative control loop, making it heavy, expensive, and power-hungry.</title>
+  <defs><marker id="dg-today-a2" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" class="t2-fill"/></marker><marker id="dg-today-a3" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" class="t3-fill"/></marker></defs>
+  <rect class="warn-box" x="40" y="14" width="360" height="184" rx="10"/>
+  <text class="t-title" x="58" y="42">High-performance on-board computer</text>
+  <text class="t-body" x="58" y="61">GPU-class · big battery · cooling</text>
+  <rect class="t2-box" x="54" y="76" width="332" height="50" rx="25"/>
+  <path class="t2-line" d="M95,101 A11,11 0 1 1 84,90" marker-end="url(#dg-today-a2)"/>
+  <text class="t-strong" x="108" y="97">Reactive loop</text>
+  <text class="t-small" x="108" y="115">100–1000 Hz · motion, safety</text>
+  <rect class="t3-box" x="54" y="136" width="332" height="50" rx="25"/>
+  <path class="t3-line" d="M95,161 A11,11 0 1 1 84,150" marker-end="url(#dg-today-a3)"/>
+  <text class="t-strong" x="108" y="157">Deliberative loop</text>
+  <text class="t-small" x="108" y="175">3D scene, VLMs, motion planning</text>
+  <rect class="chassis" x="30" y="206" width="380" height="36" rx="8"/>
+  <text class="t-on-chassis" x="220" y="229" text-anchor="middle">Strawberry-picking robot</text>
+  <circle class="wheel" cx="80" cy="250" r="13"/><circle class="wheel" cx="170" cy="250" r="13"/><circle class="wheel" cx="270" cy="250" r="13"/><circle class="wheel" cx="360" cy="250" r="13"/>
+  <text class="t-warn" x="220" y="290" text-anchor="middle">Heavy · expensive · power-hungry</text>
+</svg>

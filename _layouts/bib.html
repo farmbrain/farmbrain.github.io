@@ -1,0 +1,64 @@
+---
+---
+{%- comment -%}
+  Template for one publication entry, rendered by jekyll-scholar from
+  _bibliography/papers.bib. Link fields: pdf, slides (URL or file name under
+  /assets/papers/ or /assets/slides/), arxiv (id or URL), code, website, video, abstract.
+{%- endcomment -%}
+{% assign pdf_url = "" %}
+{% if entry.pdf and entry.pdf != "" %}
+  {% if entry.pdf contains "://" %}{% assign pdf_url = entry.pdf %}{% else %}{% assign pdf_url = "/assets/papers/" | append: entry.pdf | relative_url %}{% endif %}
+{% endif %}
+{% assign slides_url = "" %}
+{% if entry.slides and entry.slides != "" %}
+  {% if entry.slides contains "://" %}{% assign slides_url = entry.slides %}{% else %}{% assign slides_url = "/assets/slides/" | append: entry.slides | relative_url %}{% endif %}
+{% endif %}
+{% assign arxiv_url = "" %}
+{% if entry.arxiv and entry.arxiv != "" %}
+  {% if entry.arxiv contains "://" %}{% assign arxiv_url = entry.arxiv %}{% else %}{% assign arxiv_url = "https://arxiv.org/abs/" | append: entry.arxiv %}{% endif %}
+{% endif %}
+{% assign title_url = pdf_url %}
+{% if title_url == "" %}{% assign title_url = arxiv_url %}{% endif %}
+{% if title_url == "" and entry.doi %}{% assign title_url = "https://doi.org/" | append: entry.doi %}{% endif %}
+
+{% assign publication_date = entry.year %}
+{% if entry.month and entry.month != "" and entry.year and entry.year != "" %}
+  {% assign publication_date = "1 " | append: entry.month | append: " " | append: entry.year | date: "%B %Y" %}
+{% endif %}
+
+<div class="pub-item" id="{{ entry.key }}">
+  <div class="pub-title">
+    {% if entry.abbr and entry.abbr != "" %}<span class="pub-badge">{{ entry.abbr }}</span>{% endif %}
+    {% if title_url != "" %}<a href="{{ title_url }}">{{ entry.title }}</a>{% else %}{{ entry.title }}{% endif %}
+  </div>
+  <div class="pub-meta">
+    {%- assign author_list = entry.author | split: " and " -%}
+    {%- for a in author_list -%}
+      {%- assign parts = a | split: ", " -%}
+      {%- if parts.size == 2 -%}{{ parts[1] | strip }} {{ parts[0] | strip }}{%- else -%}{{ a | strip }}{%- endif -%}
+      {%- if forloop.rindex == 2 -%}{% if author_list.size > 2 %},{% endif %} and {% elsif forloop.last == false -%}, {% endif -%}
+    {%- endfor %}
+  </div>
+  <div class="pub-venue">
+    <em>{%- if entry.booktitle and entry.booktitle != "" -%}{{ entry.booktitle }}
+      {%- elsif entry.journal and entry.journal != "" -%}{{ entry.journal }}
+      {%- elsif entry.school and entry.school != "" -%}{{ entry.school }}
+      {%- elsif entry.institution and entry.institution != "" -%}{{ entry.institution }}
+      {%- endif -%}</em>{% if entry.year and entry.year != "" %}, {{ publication_date }}{% endif %}
+    {% if entry.note and entry.note != "" %}<span class="pub-note">{{ entry.note }}</span>{% endif %}
+  </div>
+  {% if entry.abstract or pdf_url != "" or entry.code or slides_url != "" or entry.website or entry.video or arxiv_url != "" %}
+  <div class="pub-links">
+    {% if entry.abstract %}<button type="button" class="pub-link abstract-toggle" aria-expanded="false"><i class="fa-solid fa-align-left" aria-hidden="true"></i>Abstract</button>{% endif %}
+    {% if pdf_url != "" %}<a class="pub-link" href="{{ pdf_url }}"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>PDF</a>{% endif %}
+    {% if arxiv_url != "" %}<a class="pub-link" href="{{ arxiv_url }}"><i class="fa-solid fa-file-lines" aria-hidden="true"></i>arXiv</a>{% endif %}
+    {% if entry.code and entry.code != "" %}<a class="pub-link" href="{{ entry.code }}"><i class="fa-brands fa-github" aria-hidden="true"></i>Code</a>{% endif %}
+    {% if slides_url != "" %}<a class="pub-link" href="{{ slides_url }}"><i class="fa-solid fa-chalkboard" aria-hidden="true"></i>Slides</a>{% endif %}
+    {% if entry.video and entry.video != "" %}<a class="pub-link" href="{{ entry.video }}"><i class="fa-solid fa-video" aria-hidden="true"></i>Video</a>{% endif %}
+    {% if entry.website and entry.website != "" %}<a class="pub-link" href="{{ entry.website }}"><i class="fa-solid fa-globe" aria-hidden="true"></i>Website</a>{% endif %}
+  </div>
+  {% endif %}
+  {% if entry.abstract %}
+  <div class="abstract-block" hidden><p>{{ entry.abstract | strip_newlines | strip }}</p></div>
+  {% endif %}
+</div>

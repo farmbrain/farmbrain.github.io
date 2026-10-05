@@ -1,0 +1,71 @@
+---
+layout: default
+title: Overview
+---
+{% assign p = site.data.project %}
+<section class="hero">
+  <p class="eyebrow">{{ p.award.program }}{% if p.award.number != "" %} &middot; Award {% if p.award.url != "" %}<a href="{{ p.award.url }}">{{ p.award.number }}</a>{% else %}{{ p.award.number }}{% endif %}{% endif %}</p>
+  <h1><span class="hero-name">{{ p.name }}:</span> {{ p.title }}</h1>
+  <ul class="pi-list">
+    {% for g in site.data.people.groups %}{% for m in g.members %}{% if m.pi %}
+      <li>{% if m.url != "" %}<a href="{{ m.url }}">{{ m.name }}</a>{% else %}{{ m.name }}{% endif %} <span>({{ m.role }}, {{ m.affiliation }})</span></li>
+    {% endif %}{% endfor %}{% endfor %}
+  </ul>
+</section>
+
+<section>
+  <h2>Synopsis</h2>
+  {{ p.synopsis | markdownify }}
+  <figure>
+    <div class="diagram-pair">
+      <div class="diagram-panel">
+        <div class="diagram-label">Today: self-contained robot</div>
+        {% include diagrams/split-today.svg %}
+      </div>
+      <div class="diagram-panel is-farmbrain">
+        <div class="diagram-label">FarmBrain: split, multi-rate control</div>
+        {% include diagrams/split-farmbrain.svg %}
+      </div>
+    </div>
+    <figcaption>{{ p.figures.split_caption }}</figcaption>
+  </figure>
+</section>
+
+<section>
+  <h2>Challenges</h2>
+  <div class="card-grid">
+    {% for c in p.challenges %}
+    <div class="card">
+      <h3>{{ c.title }}</h3>
+      <p>{{ c.text }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section>
+  <h2>Research thrusts</h2>
+  <figure>
+    <div class="diagram-scroll">{% include diagrams/architecture.svg %}</div>
+    <figcaption>{{ p.figures.architecture_caption }}</figcaption>
+  </figure>
+  {% for t in p.thrusts %}
+  <div class="thrust thrust-{{ t.number }}">
+    <div class="thrust-num" aria-hidden="true">{{ t.number }}</div>
+    <div>
+      <h3><span class="visually-hidden">Thrust {{ t.number }}: </span>{{ t.title }}</h3>
+      {{ t.text | markdownify }}
+    </div>
+  </div>
+  {% endfor %}
+</section>
+
+<section>
+  <h2>Prototype and evaluation</h2>
+  {{ p.evaluation | markdownify }}
+</section>
+
+<section>
+  <h2>Broader impacts</h2>
+  {{ p.impacts | markdownify }}
+</section>

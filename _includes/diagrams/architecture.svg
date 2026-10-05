@@ -1,0 +1,99 @@
+<svg class="dg dg-arch" viewBox="0 0 980 446" role="img" aria-labelledby="dg-arch-t">
+  <title id="dg-arch-t">FarmBrain architecture. Thrust 1, FarmLang, is the programming model. Thrust 2, the compiler and runtime, deploys programs across an on-farm edge server and farm robots connected by a farm-wide private 5G network. Thrust 3, AI-assisted management, collects telemetry from all of them, diagnoses problems, and guides the farm operator.</title>
+  <defs><marker id="dg-ar-a1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" class="t1-fill"/></marker><marker id="dg-ar-a2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" class="t2-fill"/></marker><marker id="dg-ar-a3" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" class="t3-fill"/></marker></defs>
+
+  <!-- Thrusts 1 and 2 -->
+  <rect class="t1-box" x="12" y="40" width="262" height="92" rx="12"/>
+  <g><rect class="t1-fill" x="28" y="70" width="40" height="40" rx="9"/><polyline points="43,82 35,90 43,98" style="fill:none;stroke:var(--t1-soft);stroke-width:3;stroke-linecap:round;stroke-linejoin:round"/><polyline points="53,82 61,90 53,98" style="fill:none;stroke:var(--t1-soft);stroke-width:3;stroke-linecap:round;stroke-linejoin:round"/></g>
+  <text class="t-title" x="80" y="90">FarmLang</text>
+  <text class="t-body" x="80" y="112">Programming model</text>
+  <text class="t-small" x="262" y="60" text-anchor="end" style="font-size:12.5px;font-weight:700;letter-spacing:0.05em;fill:var(--t1)">THRUST 1</text>
+  <line class="t1-line" x1="143.0" y1="134" x2="143.0" y2="166" marker-end="url(#dg-ar-a1)"/>
+  
+  <rect class="t2-box" x="12" y="170" width="262" height="92" rx="12"/>
+  <g><rect class="t2-fill" x="28" y="200" width="40" height="40" rx="9"/><circle cx="48" cy="220" r="10.5" style="fill:none;stroke:var(--t2-soft);stroke-width:5;stroke-dasharray:4.12 4.12"/><circle cx="48" cy="220" r="8" style="fill:var(--t2-soft)"/><circle class="t2-fill" cx="48" cy="220" r="3.2"/></g>
+  <text class="t-title" x="80" y="220">Compiler &amp; runtime</text>
+  <text class="t-body" x="80" y="242">Partition, schedule</text>
+  <text class="t-small" x="262" y="190" text-anchor="end" style="font-size:12.5px;font-weight:700;letter-spacing:0.05em;fill:var(--t2)">THRUST 2</text>
+  <text class="t-edge" x="304" y="232" style="fill:var(--t2)">deploy</text>
+
+  <!-- Physical system -->
+  <text class="t-strong" x="490" y="30" text-anchor="middle">On-farm edge server</text>
+  <g>
+    <rect class="ic" x="430" y="44" width="120" height="22" rx="4"/>
+    <rect class="ic-hole" x="440" y="53.0" width="54" height="4" rx="2"/>
+    <circle class="t1-fill" cx="536" cy="55.0" r="3"/><circle class="t2-fill" cx="524" cy="55.0" r="3"/>
+    <rect class="ic" x="430" y="70" width="120" height="22" rx="4"/>
+    <rect class="ic-hole" x="440" y="79.0" width="54" height="4" rx="2"/>
+    <circle class="t1-fill" cx="536" cy="81.0" r="3"/><circle class="t2-fill" cx="524" cy="81.0" r="3"/>
+    <rect class="ic" x="430" y="96" width="120" height="22" rx="4"/>
+    <rect class="ic-hole" x="440" y="105.0" width="54" height="4" rx="2"/>
+    <circle class="t1-fill" cx="536" cy="107.0" r="3"/><circle class="t2-fill" cx="524" cy="107.0" r="3"/>
+  </g>
+  <line class="line" x1="490" y1="120" x2="490" y2="150" style="stroke-width:2.5"/>
+  <g>
+    <line class="ic-line" x1="490" y1="166.0" x2="464.0" y2="252"/>
+    <line class="ic-line" x1="490" y1="166.0" x2="516.0" y2="252"/>
+    <line class="ic-thin" x1="480.9" y1="196.1" x2="499.1" y2="196.1"/>
+    <line class="ic-thin" x1="473.9" y1="219.3" x2="506.1" y2="219.3"/>
+    <line class="ic-thin" x1="467.6" y1="240.0" x2="512.4" y2="240.0"/>
+    <polyline class="ic-thin" points="480.9,196.1 506.1,219.3 467.6,240.0"/>
+    <circle class="ic" cx="490" cy="160" r="5.0"/>
+    <path class="wave" d="M478.0,151.0 a13.0,13.0 0 0 0 0,18.0"/>
+    <path class="wave" d="M502.0,151.0 a13.0,13.0 0 0 1 0,18.0"/>
+    <path class="wave" d="M469.0,144.0 a22.0,22.0 0 0 0 0,32.0"/>
+    <path class="wave" d="M511.0,144.0 a22.0,22.0 0 0 1 0,32.0"/>
+  </g>
+  <text class="t-strong" x="534" y="214">Farm-wide private</text>
+  <text class="t-strong" x="534" y="235">5G network</text>
+  <ellipse class="field" cx="490" cy="372" rx="206" ry="40"/>
+  <path class="stem" d="M320,382 v-9"/><ellipse class="leaf" cx="316" cy="373" rx="4" ry="2.2" transform="rotate(-30 316 373)"/><ellipse class="leaf" cx="324" cy="372" rx="4" ry="2.2" transform="rotate(30 324 372)"/><path class="stem" d="M346,390 v-9"/><ellipse class="leaf" cx="342" cy="381" rx="4" ry="2.2" transform="rotate(-30 342 381)"/><ellipse class="leaf" cx="350" cy="380" rx="4" ry="2.2" transform="rotate(30 350 380)"/><path class="stem" d="M372,394 v-9"/><ellipse class="leaf" cx="368" cy="385" rx="4" ry="2.2" transform="rotate(-30 368 385)"/><ellipse class="leaf" cx="376" cy="384" rx="4" ry="2.2" transform="rotate(30 376 384)"/><path class="stem" d="M400,396 v-9"/><ellipse class="leaf" cx="396" cy="387" rx="4" ry="2.2" transform="rotate(-30 396 387)"/><ellipse class="leaf" cx="404" cy="386" rx="4" ry="2.2" transform="rotate(30 404 386)"/><path class="stem" d="M430,394 v-9"/><ellipse class="leaf" cx="426" cy="385" rx="4" ry="2.2" transform="rotate(-30 426 385)"/><ellipse class="leaf" cx="434" cy="384" rx="4" ry="2.2" transform="rotate(30 434 384)"/><path class="stem" d="M458,390 v-9"/><ellipse class="leaf" cx="454" cy="381" rx="4" ry="2.2" transform="rotate(-30 454 381)"/><ellipse class="leaf" cx="462" cy="380" rx="4" ry="2.2" transform="rotate(30 462 380)"/><path class="stem" d="M520,394 v-9"/><ellipse class="leaf" cx="516" cy="385" rx="4" ry="2.2" transform="rotate(-30 516 385)"/><ellipse class="leaf" cx="524" cy="384" rx="4" ry="2.2" transform="rotate(30 524 384)"/><path class="stem" d="M548,396 v-9"/><ellipse class="leaf" cx="544" cy="387" rx="4" ry="2.2" transform="rotate(-30 544 387)"/><ellipse class="leaf" cx="552" cy="386" rx="4" ry="2.2" transform="rotate(30 552 386)"/><path class="stem" d="M576,394 v-9"/><ellipse class="leaf" cx="572" cy="385" rx="4" ry="2.2" transform="rotate(-30 572 385)"/><ellipse class="leaf" cx="580" cy="384" rx="4" ry="2.2" transform="rotate(30 580 384)"/><path class="stem" d="M610,396 v-9"/><ellipse class="leaf" cx="606" cy="387" rx="4" ry="2.2" transform="rotate(-30 606 387)"/><ellipse class="leaf" cx="614" cy="386" rx="4" ry="2.2" transform="rotate(30 614 386)"/><path class="stem" d="M640,390 v-9"/><ellipse class="leaf" cx="636" cy="381" rx="4" ry="2.2" transform="rotate(-30 636 381)"/><ellipse class="leaf" cx="644" cy="380" rx="4" ry="2.2" transform="rotate(30 644 380)"/><path class="stem" d="M666,384 v-9"/><ellipse class="leaf" cx="662" cy="375" rx="4" ry="2.2" transform="rotate(-30 662 375)"/><ellipse class="leaf" cx="670" cy="374" rx="4" ry="2.2" transform="rotate(30 670 374)"/>
+  <g>
+    <rect class="ic" x="340" y="338" width="64" height="22" rx="5"/><circle class="ic" cx="352" cy="363" r="8"/><circle class="ic-hole" cx="352" cy="363" r="3"/><circle class="ic" cx="392" cy="363" r="8"/><circle class="ic-hole" cx="392" cy="363" r="3"/>
+    <polyline class="ic-line" points="390,338 402,312 424,320" style="stroke-width:4"/>
+    <circle class="ic" cx="402" cy="312" r="4"/>
+    <path class="ic-line" d="M424,320 l6,-6 M424,320 l7,3" style="stroke-width:2.5"/>
+    <path class="berry" d="M434,316 c6,0 8,5 5,10 c-2,4 -5,6 -6,6 c-1,0 -4,-2 -6,-6 c-3,-5 0,-10 7,-10 z"/>
+    <path class="leaf" d="M428,315 l5,-4 l3,4 l3,-4 l4,4 z"/>
+  </g>
+  <g>
+    <line class="ic-line" x1="460" y1="296" x2="520" y2="296"/>
+    <line class="ic-line" x1="460" y1="296" x2="460" y2="290"/><line class="ic-line" x1="520" y1="296" x2="520" y2="290"/>
+    <ellipse class="ic" cx="460" cy="288" rx="15" ry="3"/><ellipse class="ic" cx="520" cy="288" rx="15" ry="3"/>
+    <rect class="ic" x="476" y="290" width="28" height="16" rx="6"/>
+    <circle class="ic-hole" cx="490" cy="298" r="3.5"/>
+    <path class="ic-thin" d="M480,306 l-5,7 M500,306 l5,7"/>
+  </g>
+  <g>
+    <rect class="ic" x="574" y="338" width="64" height="22" rx="5"/><circle class="ic" cx="586" cy="363" r="8"/><circle class="ic-hole" cx="586" cy="363" r="3"/><circle class="ic" cx="626" cy="363" r="8"/><circle class="ic-hole" cx="626" cy="363" r="3"/>
+    <line class="ic-line" x1="620" y1="338" x2="620" y2="316"/>
+    <rect class="ic" x="610" y="304" width="22" height="13" rx="3"/>
+    <circle class="ic-hole" cx="625" cy="310.5" r="3.5"/>
+  </g>
+  <text class="t-strong" x="490" y="436" text-anchor="middle">Farm robots</text>
+
+  <!-- Thrust 3 -->
+  <path class="t3-line dashed" d="M554,84 C610,84 646,84 700,84" marker-end="url(#dg-ar-a3)"/>
+  <path class="t3-line dashed" d="M532,168 C610,168 656,112 700,112" marker-end="url(#dg-ar-a3)"/>
+  <path class="t3-line dashed" d="M656,336 C720,300 736,200 756,138" marker-end="url(#dg-ar-a3)"/>
+  <text class="t-edge" x="572" y="68" style="fill:var(--t3)">telemetry</text>
+  
+  <rect class="t3-box" x="706" y="40" width="262" height="92" rx="12"/>
+  <g><rect class="t3-fill" x="722" y="70" width="40" height="40" rx="9"/><circle cx="739" cy="87" r="9" style="fill:none;stroke:var(--t3-soft);stroke-width:2.8;stroke-linecap:round;stroke-linejoin:round"/><line x1="746" y1="94" x2="753" y2="101" style="fill:none;stroke:var(--t3-soft);stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round"/><polyline points="732,87 736,87 738,82 741,92 743,87 746,87" style="fill:none;stroke:var(--t3-soft);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round"/></g>
+  <text class="t-title" x="774" y="90">Management</text>
+  <text class="t-body" x="774" y="112">Diagnose, recover</text>
+  <text class="t-small" x="956" y="60" text-anchor="end" style="font-size:12.5px;font-weight:700;letter-spacing:0.05em;fill:var(--t3)">THRUST 3</text>
+  <line class="t3-line" x1="837.0" y1="134" x2="837.0" y2="196" marker-end="url(#dg-ar-a3)"/>
+  <text class="t-edge" x="851.0" y="174" style="fill:var(--t3)">guidance</text>
+  <g>
+    <circle class="t3-fill" cx="837.0" cy="224" r="10"/>
+    <ellipse class="t3-fill" cx="837.0" cy="216" rx="17" ry="3.5"/>
+    <rect class="t3-fill" x="828.0" y="206" width="18" height="10" rx="4"/>
+    <path class="t3-fill" d="M818.0,260 a19,22 0 0 1 38,0 z"/>
+  </g>
+  <text class="t-strong" x="837.0" y="286" text-anchor="middle">Farm operator</text>
+
+  <!-- deploy arrows drawn last so they sit above the scene -->
+  <path class="t2-line" d="M274,204 C334,204 370,92 418,92" marker-end="url(#dg-ar-a2)"/>
+  <path class="t2-line" d="M224,262 C224,346 244,352 330,350" marker-end="url(#dg-ar-a2)"/>
+</svg>

@@ -1,0 +1,100 @@
+# Content for the Overview (home) page.
+# Text fields accept Markdown.
+
+name: FarmBrain
+title: Enabling Real-Time Agricultural Robotics with AI-Native Cellular Access Edge
+institution: The University of Texas at Austin
+
+# NSF award. Leave number/url empty to hide the award line and the
+# grant number in the footer acknowledgment.
+award:
+  program: "NSF CISE VINES (Track 1)"
+  number: "2548960"
+  url: "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2548960"
+
+keywords: [5G networks, Edge computing, Agricultural robotics, AI/ML-enabled computing]
+
+synopsis: |
+  Agricultural robotics is a critical answer to farm labor shortages and the need for more efficient food
+  production, yet today's systems face a fundamental economic barrier. Robots must be *lightweight* enough
+  to navigate narrow farm environments — corn rows as narrow as 15 inches, strawberry tunnels with 12–15
+  inches of clearance — and at the same time *powerful* enough to run AI-driven perception and planning
+  within sub-100-millisecond real-time constraints. The result is robots that cost hundreds of thousands
+  of dollars each, an economics that prevents widespread deployment.
+
+  **FarmBrain** is an AI-native 5G edge architecture that resolves this impasse. Lightweight robots access
+  sophisticated AI capabilities through low-latency private 5G connectivity to nearby on-farm edge servers.
+  High-frequency reactive control loops (motion control, safety) stay on the robot, while low-frequency
+  deliberative loops (3D scene reconstruction, vision-language inference, motion planning) run as shared
+  services on the edge. Sharing expensive compute across a fleet of simple robots changes the economics of
+  agricultural robotics while preserving the real-time responsiveness and safety required for delicate
+  manipulation.
+
+# Diagrams are inline SVGs in _includes/diagrams/ (themed by assets/css/main.css).
+figures:
+  split_caption: "Today's robots run both control loops on a heavy on-board computer. FarmBrain keeps only the high-frequency reactive loop on the robot and runs the deliberative loop on a 5G edge server that the whole fleet shares."
+  architecture_caption: "FarmBrain architecture. Developers write FarmLang programs (Thrust 1); the compiler and runtime deploy them across farm robots and a shared on-farm edge server connected by a farm-wide private 5G network (Thrust 2); AI-assisted management diagnoses problems from cross-layer telemetry and keeps the system running for non-expert operators (Thrust 3)."
+
+challenges:
+  - title: Programming split, multi-rate control
+    text: >-
+      Robotics frameworks lack abstractions for cooperating control loops with explicit SLOs and for
+      cross-network shared state with non-blocking, bounded-staleness guarantees under wireless jitter.
+  - title: Tight end-to-end SLOs under variability
+    text: >-
+      Wireless links add stochastic delay, and uplink and GPU contention inflate latency. The RAN cannot
+      see application deadlines, and the edge cannot see network delay.
+  - title: End-to-end resilience
+    text: >-
+      Robots have physical state that cannot simply be "restarted." Local and remote failures must both
+      trigger time-bounded safe holds, and RAN failures need sub-millisecond failover.
+  - title: Manageability for non-experts
+    text: >-
+      Observability for robots, RAN, and edge is siloed and time-misaligned, and root causes span
+      non-linear, time-lagged dependencies across layers. Farm operators need actionable guidance.
+
+thrusts:
+  - number: 1
+    title: A Programming Model for Multi-Rate Control Loops with SLOs
+    short: Programming Model
+    text: >-
+      **FarmLang** lets robotics developers describe a task as a set of cooperating control loops, each
+      with its own timing requirement. They write the task once; coordinating it across the robot and the
+      edge over an unreliable wireless link is left to the system. FarmLang also gives developers one simple
+      way to say how the robot should stay safe when something goes wrong, whether the failure is physical
+      (a slipping gripper) or in the network (a dropped connection).
+  - number: 2
+    title: An SLO- and Resilience-Aware Compiler and Runtime for the AI-Native Edge
+    short: Compilation and Runtime
+    text: >-
+      The FarmBrain compiler automatically splits each program between the robot and the edge. Time-critical
+      control stays on the robot, and heavy AI tasks move to shared edge servers. At run time, FarmBrain
+      scales edge services up and down as the workload changes, recovers quickly from failures, and schedules
+      both the 5G network and the edge GPUs so that every robot meets its deadlines.
+  - number: 3
+    title: AI-Assisted Management and Resilience for Complex Infrastructure
+    short: Management and Resilience
+    text: >-
+      FarmBrain monitors itself across robots, the 5G network, and the edge. It uses AI to find the root
+      cause when performance degrades, then fixes the problem automatically or tells farm operators what to
+      do in plain language. If 5G infrastructure fails, it fails over within milliseconds while the robots
+      hold a safe state.
+
+evaluation: |
+  FarmBrain will be prototyped on a private 5G edge testbed at UT Austin together
+  with an agricultural robot platform built on a mobile rover base and robot arm. It will be
+  validated on fruit-picking, navigation, and crop-inspection tasks with multiple robots. A controlled physical
+  "twin" testbed with artificial fruit allows evaluation year-round, followed by deployment on real farms with
+  industry partners.
+
+impacts: |
+  If successful, FarmBrain will lower the barrier to deploying advanced agricultural robotics, making AI-driven
+  robots economically viable for small and medium-scale farms as well as large ones. The AI-native edge platform
+  offers a replicable model for real-time edge computing in other safety-critical domains such as autonomous
+  vehicles, industrial automation, and emergency response. The project will release the FarmBrain framework,
+  including software, programming tools, example applications, and benchmarks, as open source. Research
+  findings will be integrated into computer systems and robotics curricula at UT Austin, including the Freshman
+  Research Initiative on Agricultural Robotics. Results will also be shared with industry partners and at the
+  LDOS Research Symposium.
+
+  Open-source software, data, and results will be made available on this website.
