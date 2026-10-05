@@ -136,8 +136,8 @@ figcaption { margin-top: 8px; font-size: 0.9rem; color: var(--fg-muted); text-al
   border: 1px solid var(--border); border-radius: 10px; padding: 14px 14px 6px;
 }
 .diagram-label {
-  font-size: 0.8rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase;
-  color: var(--fg-muted); margin-bottom: 4px;
+  font-size: 0.95rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
+  color: var(--fg-muted); margin-bottom: 6px;
 }
 .diagram-panel.is-farmbrain .diagram-label { color: var(--accent); }
 .diagram-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
@@ -152,8 +152,8 @@ svg.dg { display: block; width: 100%; height: auto; }
 .dg .t-code-k { fill: var(--t1); }
 .dg .t-badge { font-size: 12px; font-weight: 700; fill: var(--bg); }
 .dg .t-on-chassis { font-size: 14px; font-weight: 600; fill: var(--bg); }
-.dg .t-warn { font-size: 15px; font-weight: 600; fill: var(--warn); }
-.dg .t-good { font-size: 15px; font-weight: 600; fill: var(--accent); }
+.dg .t-warn { font-size: 17.5px; font-weight: 600; fill: var(--warn); }
+.dg .t-good { font-size: 17.5px; font-weight: 600; fill: var(--accent); }
 .dg .t-italic { font-size: 11.5px; font-style: italic; fill: var(--fg); }
 .dg .box { fill: var(--bg-soft); stroke: var(--border); stroke-width: 1.5; }
 .dg .plain { fill: var(--bg); stroke: var(--border); stroke-width: 1.2; }

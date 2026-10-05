@@ -15,5 +15,5 @@
   <rect class="chassis" x="30" y="206" width="380" height="36" rx="8"/>
   <text class="t-on-chassis" x="220" y="229" text-anchor="middle">Strawberry-picking robot</text>
   <circle class="wheel" cx="80" cy="250" r="13"/><circle class="wheel" cx="170" cy="250" r="13"/><circle class="wheel" cx="270" cy="250" r="13"/><circle class="wheel" cx="360" cy="250" r="13"/>
-  <text class="t-warn" x="220" y="290" text-anchor="middle">Heavy · expensive · power-hungry</text>
+  <text class="t-warn" x="220" y="290" text-anchor="middle">Heavy · Expensive · Power-hungry</text>
 </svg>

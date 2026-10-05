@@ -185,7 +185,7 @@ today = f'''<svg class="dg" viewBox="0 0 440 300" role="img" aria-labelledby="dg
   <rect class="chassis" x="30" y="206" width="380" height="36" rx="8"/>
   <text class="t-on-chassis" x="220" y="229" text-anchor="middle">Strawberry-picking robot</text>
   {"".join(f'<circle class="wheel" cx="{x}" cy="250" r="13"/>' for x in (80,170,270,360))}
-  <text class="t-warn" x="220" y="290" text-anchor="middle">Heavy · expensive · power-hungry</text>
+  <text class="t-warn" x="220" y="290" text-anchor="middle">Heavy · Expensive · Power-hungry</text>
 </svg>
 '''
 
@@ -226,7 +226,7 @@ fb = f'''<svg class="dg" viewBox="0 0 440 300" role="img" aria-labelledby="dg-fb
   {"".join(f'<circle class="wheel" cx="{x}" cy="250" r="12"/>' for x in (46,101,156))}
   {minis}
   <text class="t-small" x="346" y="258" text-anchor="middle">fleet shares one edge</text>
-  <text class="t-good" x="220" y="290" text-anchor="middle">Lightweight · inexpensive · low-power</text>
+  <text class="t-good" x="220" y="290" text-anchor="middle">Lightweight · Inexpensive · Low-power</text>
 </svg>
 '''
 for name, svg in (("architecture.svg", arch), ("split-today.svg", today), ("split-farmbrain.svg", fb)):

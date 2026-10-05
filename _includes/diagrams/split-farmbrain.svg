@@ -41,5 +41,5 @@
   <circle class="wheel" cx="46" cy="250" r="12"/><circle class="wheel" cx="101" cy="250" r="12"/><circle class="wheel" cx="156" cy="250" r="12"/>
   <line class="line dashed" x1="290" y1="198" x2="290" y2="214"/><rect class="chassis" x="268" y="214" width="44" height="14" rx="4"/><circle class="wheel" cx="279" cy="232" r="5"/><circle class="wheel" cx="301" cy="232" r="5"/><line class="line dashed" x1="344" y1="198" x2="344" y2="214"/><rect class="chassis" x="322" y="214" width="44" height="14" rx="4"/><circle class="wheel" cx="333" cy="232" r="5"/><circle class="wheel" cx="355" cy="232" r="5"/><line class="line dashed" x1="398" y1="198" x2="398" y2="214"/><rect class="chassis" x="376" y="214" width="44" height="14" rx="4"/><circle class="wheel" cx="387" cy="232" r="5"/><circle class="wheel" cx="409" cy="232" r="5"/>
   <text class="t-small" x="346" y="258" text-anchor="middle">fleet shares one edge</text>
-  <text class="t-good" x="220" y="290" text-anchor="middle">Lightweight · inexpensive · low-power</text>
+  <text class="t-good" x="220" y="290" text-anchor="middle">Lightweight · Inexpensive · Low-power</text>
 </svg>
