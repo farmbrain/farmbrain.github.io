@@ -24,34 +24,12 @@ Append a BibTeX entry to `_bibliography/papers.bib`. Entries are grouped by year
 newest first. Beyond standard fields, the site understands `abbr`, `pdf`, `slides`,
 `arxiv`, `code`, `video`, `website`, and `abstract`:
 
-```bibtex
-@inproceedings{farmbrain-hotnets27,
-  abbr      = {HotNets},
-  author    = {Jane Doe and Daehyeok Kim and Aditya Akella and Volkan Isler},
-  title     = {An Example FarmBrain Paper},
-  booktitle = {Proceedings of the 26th ACM Workshop on Hot Topics in Networks (HotNets)},
-  pdf       = {farmbrain-hotnets27.pdf},
-  arxiv     = {2601.01234},
-  code      = {https://github.com/farmbrain},
-  month     = nov,
-  year      = 2027
-}
-```
-
 Do not put an `@` inside `%` comments in the `.bib` file. The BibTeX parser treats it
 as the start of an entry.
 
 ## Adding a person
 
 Add an item under the right group in `_data/people.yml`:
-
-```yaml
-      - name: Jane Doe
-        title: Graduate Research Assistant
-        affiliation: The University of Texas at Austin
-        url: https://example.com/
-        photo: /assets/img/people/jane.jpg   # optional
-```
 
 ## Deploying
 
@@ -69,9 +47,10 @@ bundle install
 bundle exec jekyll serve      # http://localhost:4000
 ```
 
-Or with Docker:
+Or with Docker (no local Ruby needed):
 
 ```sh
-docker run --rm -it -p 4000:4000 -v "$PWD":/site -w /site ruby:3.2 \
-  bash -c "bundle install && bundle exec jekyll serve --host 0.0.0.0"
+docker compose up             # http://localhost:4000, live reload
 ```
+
+The first run installs gems into a cached volume; later runs start quickly.

@@ -37,4 +37,5 @@ exclude:
   - vendor
   - .github
   - scripts
+  - docker-compose.yml
   - farmbrain-proposal.pdf
