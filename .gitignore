@@ -9,3 +9,6 @@ Gemfile.lock
 
 # The full proposal is a private reference; never publish it.
 farmbrain-proposal.pdf
+
+# Python bytecode from scripts/gen_diagrams.py
+scripts/__pycache__/
