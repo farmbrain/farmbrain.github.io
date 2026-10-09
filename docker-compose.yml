@@ -8,7 +8,7 @@ services:
       bash -c "bundle install &&
                bundle exec jekyll serve --host 0.0.0.0 --livereload --force_polling"
     ports:
-      - "4000:4000"     # site
+      - "${PORT:-4000}:4000"   # site; PORT=4002 docker compose up if 4000 is taken
       - "35729:35729"   # live reload
     volumes:
       - .:/site
