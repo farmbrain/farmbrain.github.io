@@ -35,13 +35,22 @@ groups:
 
   - title: Graduate Students
     members:
+      - name: Yukang Cao
+        title: PhD Student
+        affiliation: The University of Texas at Austin
       - name: Alvin Choi
+        title: PhD Student
+        affiliation: The University of Texas at Austin
+      - name: Sumin Hu
         title: PhD Student
         affiliation: The University of Texas at Austin
       - name: Joon Ha Kim
         title: PhD Student
         affiliation: The University of Texas at Austin
         url: https://jhkjames1110.github.io/
+      - name: Umut Ozyurt
+        title: PhD Student
+        affiliation: The University of Texas at Austin
       - name: Xiao Zhang
         title: PhD Student
         affiliation: The University of Texas at Austin
